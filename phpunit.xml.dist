@@ -12,7 +12,7 @@
     </php>
 
     <filter>
-        <whitelist>
+        <whitelist processUncoveredFilesFromWhitelist="true">
             <directory>./</directory>
             <exclude>
                 <directory>./Resources</directory>
