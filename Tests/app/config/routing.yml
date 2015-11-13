@@ -1,3 +1,5 @@
-micro_base_service_homepage:
-    path:     /hello/{name}
-    defaults: { _controller: MicroBaseServiceBundle:Default:index }
+rest : 
+  type : rest 
+  resource : "routing_rest.yml"
+  prefix : /api
+
