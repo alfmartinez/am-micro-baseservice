@@ -12,4 +12,8 @@ class StatusRestController extends Controller
             'msg' => 'OK'
         );
     }
+    
+    public function loadavgAction(){
+        return sys_getloadavg();
+    }
 }
