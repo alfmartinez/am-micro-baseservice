@@ -1,23 +1,29 @@
 {
-    "name" : "am-micro/baseservice",
-    "description" : "BaseService Bundle for microservice architecture",
-    "type" : "symfony-bundle",
+    "name": "am-micro/baseservice",
+    "description": "BaseService Bundle for microservice architecture",
+    "type": "symfony-bundle",
     "license": "MIT",
-    "authors" : [{
-        "name" : "Alexandre Martinez",
-        "email" : "alexandre.martinez76@gmail.com"
-    }],
-    "keywords" : [
+    "authors": [{
+            "name": "Alexandre Martinez",
+            "email": "alexandre.martinez76@gmail.com"
+        }],
+    "keywords": [
         "base microservice micro"
     ],
-    "require" : {
-            "php" : ">=5.5.0",
-            "symfony/symfony": "2.7.*",
-            "am-micro/client": "0.0.1"
+    "require": {
+        "php": ">=5.5.0",
+        "twig/twig": "^1.23",
+        "symfony/twig-bundle": "^2.7",
+        "am-micro/client": "0.0.1"
     },
-    "autoload" : {
-        "psr-4" : {
-            "Micro\\BaseServiceBundle\\" : ""
+    "autoload": {
+        "psr-4": {
+            "Micro\\BaseServiceBundle\\": ""
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "ext-debug": "*"
+
     }
 }

@@ -1,0 +1,3 @@
+micro_base_service_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: MicroBaseServiceBundle:Default:index }
