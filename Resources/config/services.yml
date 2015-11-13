@@ -1,0 +1,4 @@
+services:
+#    micro_base_service.example:
+#        class: Micro\BaseServiceBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
