@@ -12,7 +12,7 @@ class StatusRestControllerTest extends WebTestCase {
     public function statusReturnsOK() {
         $client = static::createClient();
 
-        $client->request('GET', '/api/status');
+        $client->request('GET', '/api/service/status');
 
         $response = $client->getResponse();
         $this->assertEquals(200, $response->getStatusCode());
@@ -27,7 +27,7 @@ class StatusRestControllerTest extends WebTestCase {
     public function loadAvgReturnsArrayOfLoadAverage() {
         $client = static::createClient();
 
-        $client->request('GET', '/api/loadavg');
+        $client->request('GET', '/api/service/loadavg');
 
         $response = $client->getResponse();
         $this->assertEquals(200, $response->getStatusCode());

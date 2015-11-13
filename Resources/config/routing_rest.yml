@@ -1,6 +1,7 @@
 ## YAML Template.
 ---
-status : 
+service_status : 
   type: rest
   resource:     "MicroBaseServiceBundle:StatusRest"
   name_prefix:  api_service_
+  prefix: /api/service
