@@ -1,4 +1,7 @@
 Tests/app/cache
 Tests/app/logs
+Tests/app/config/parameters.yml
 composer.lock
 vendor/
+/nbproject/private/
+nbproject/

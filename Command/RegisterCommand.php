@@ -15,14 +15,10 @@ class RegisterCommand extends ContainerAwareCommand {
     }
 
     protected function execute(InputInterface $input, OutputInterface $output) {
-        $name = 'Sweetie';
-        if ($name) {
-            $text = 'Hello ' . $name;
-        } else {
-            $text = 'Hello';
-        }
-
-        $output->writeln($text);
+        $config = $this->getContainer()->get('configuration_api')->getConfiguration();
+        $registerService = $this->getContainer()->get('register_api');
+        $result = $registerService->register(json_encode($config));
+        $output->writeln($result);
     }
 
 }

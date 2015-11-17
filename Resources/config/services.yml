@@ -1,4 +1,12 @@
 services:
-#    micro_base_service.example:
-#        class: Micro\BaseServiceBundle\Example
-#        arguments: [@service_id, "plain_value", %parameter%]
+    register_api:
+        class: Micro\BaseServiceBundle\Services\API\RegisterService
+        arguments: [@rest_client]
+        
+    rest_client:
+        class: Micro\ClientBundle\Rest\Client
+        arguments: [%registry_url%]
+        
+    configuration_api:
+        class: Micro\BaseServiceBundle\Services\API\ConfigurationService
+        arguments: [%micro_services%]

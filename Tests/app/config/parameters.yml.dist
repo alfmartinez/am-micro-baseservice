@@ -1,0 +1,4 @@
+parameters:
+    micro_base_service:
+        registry_url: ~
+        micro_services: []
