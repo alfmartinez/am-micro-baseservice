@@ -1,5 +1,6 @@
 parameters:
     registry_url: http://test.example.com/
+    server_url: http://service.example.com/
     micro_services: 
         name: Test
         

@@ -9,4 +9,4 @@ services:
         
     configuration_api:
         class: Micro\BaseServiceBundle\Services\API\ConfigurationService
-        arguments: [%micro_services%]
+        arguments: [%micro_services%, %server_url%]

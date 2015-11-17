@@ -9,7 +9,9 @@ class ConfigurationService {
      */
     private $configuration;
     
-    function __construct(array $configuration) {
+    function __construct(array $configuration, $serverUrl) {
+        $serverConfig = ["host"=>$serverUrl];
+        $configuration = array_merge($configuration, $serverConfig);
         $this->configuration = $configuration;
     }
     
