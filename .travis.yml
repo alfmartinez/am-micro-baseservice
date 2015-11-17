@@ -7,9 +7,8 @@ php:
 before_script:
   - composer install --dev
 
-script: ./vendor/bin/phpunit --coverage-text
+script:
+    - vendor/bin/phpunit --coverage-clover=coverage.xml
 
-before_install:
-  - pip install --user codecov
 after_success:
-  - codecov
+    - bash <(curl -s https://codecov.io/bash)
