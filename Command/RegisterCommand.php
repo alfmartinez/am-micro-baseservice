@@ -17,7 +17,7 @@ class RegisterCommand extends ContainerAwareCommand {
     protected function execute(InputInterface $input, OutputInterface $output) {
         $config = $this->getContainer()->get('configuration_api')->getConfiguration();
         $registerService = $this->getContainer()->get('register_api');
-        $result = $registerService->register(json_encode($config));
+        $result = $registerService->register($config['name'], json_encode($config));
         $output->writeln($result);
     }
 

@@ -39,8 +39,8 @@ class RegisterCommandTest extends WebTestCase {
         $mock = m::mock('alias:Httpful\Request');
 
         $mock
-                ->shouldReceive('post')
-                ->with('http://test.example.com/api/services/registers', $config)
+                ->shouldReceive('put')
+                ->with('http://test.example.com/api/services/Test/provider', $config)
                 ->andReturnSelf();
 
         $mock
